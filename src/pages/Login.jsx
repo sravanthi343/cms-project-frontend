@@ -157,21 +157,7 @@ export default function Login() {
             {mode === 'login' ? 'Sign in with your college User ID' : 'Register with your college credentials'}
           </p>
 
-          {/* Demo credentials hint */}
-          {mode === 'login' && (
-            <div style={{
-              background: '#eff6ff', border: '1px solid #bfdbfe',
-              borderRadius: 8, padding: '10px 12px', marginBottom: 20,
-              display: 'flex', gap: 8, alignItems: 'flex-start',
-            }}>
-              <Shield size={14} color="#2563eb" style={{ marginTop: 2, flexShrink: 0 }} />
-              <div style={{ fontSize: 12, color: '#1d4ed8', lineHeight: 1.6 }}>
-                <strong>Demo credentials:</strong><br />
-                Faculty: <code>FAC001</code> / <code>faculty123</code><br />
-                Student: <code>STU001</code> / <code>student123</code>
-              </div>
-            </div>
-          )}
+          
 
           {errors._global && (
             <div style={{
@@ -190,14 +176,14 @@ export default function Login() {
               <>
                 <Field label="Full Name" error={errors.fullName}>
                   <input value={form.fullName} onChange={e => set('fullName', e.target.value)}
-                    placeholder="Dr. Ramesh Kumar" style={inputStyle(errors.fullName)}
+                    placeholder="Enter Your FullName" style={inputStyle(errors.fullName)}
                     onFocus={e => e.target.style.borderColor = '#3b82f6'}
                     onBlur={e => e.target.style.borderColor = errors.fullName ? '#ef4444' : '#e4e4e7'}
                   />
                 </Field>
                 <Field label="Email Address" error={errors.email}>
                   <input type="email" value={form.email} onChange={e => set('email', e.target.value)}
-                    placeholder="you@college.edu" style={inputStyle(errors.email)}
+                    placeholder="your@gamil.com" style={inputStyle(errors.email)}
                     onFocus={e => e.target.style.borderColor = '#3b82f6'}
                     onBlur={e => e.target.style.borderColor = errors.email ? '#ef4444' : '#e4e4e7'}
                   />
