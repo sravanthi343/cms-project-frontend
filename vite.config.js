@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'https://cms-project-frontend.onrender.com',
+        target: 'https://cms-project-frontend.onrender.com/api',
         changeOrigin: true,
       }
     }
