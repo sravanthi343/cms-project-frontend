@@ -71,7 +71,7 @@ export function AuthProvider({ children }) {
   const login = useCallback(async (userId, password) => {
     // ApiResponse<AuthResponse>  →  { success, message, data: { token, userId, fullName, email, role } }
     const res = await authAPI.login({ userId, password });
-    const authData = res.data;   // unwrapped by interceptor → ApiResponse obj
+    const authData = res.data ?? res;   // unwrapped by interceptor → ApiResponse obj
     const session = {
       token:    authData.token,
       userId:   authData.userId,
