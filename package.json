@@ -21,8 +21,5 @@
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.1.4"
   }
-  "id":"m5t3"
-"engines": {
-  "node": "18.x"
-}
+ 
 }
