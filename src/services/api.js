@@ -5,7 +5,7 @@ const BASE_URL = import.meta.env.VITE_API_URL || 'https://render-tt-project-back
 const api = axios.create({
   baseURL: BASE_URL,
   headers: { 'Content-Type': 'application/json' },
-  timeout: 20000,
+  timeout: 60000,
 });
 
 // Attach JWT Bearer token from session on every request
