@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'https://render-tt-project-backend.onrender.com/api/auth/register';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://render-tt-project-backend.onrender.com/api';
 
 const api = axios.create({
   baseURL: BASE_URL,
